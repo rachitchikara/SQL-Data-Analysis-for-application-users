@@ -68,6 +68,7 @@ where [Email (string)] not like '%_@%_.com';
 
 
 #SQL Query 4:
+
 With p_activity as
 (select *,
 lag([activity_week]) over(partition by user_id order by [activity_week]) as
