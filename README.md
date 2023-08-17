@@ -1,6 +1,7 @@
 # SQL-Data-Analysis-for-application-users
 
 #SQL Query 1:
+
 with p_users as
 (
 select user_name,
