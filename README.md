@@ -1,5 +1,7 @@
 # SQL-Data-Analysis-for-application-users
 
+''' Task 1-	Write a SQL code to retrieve the current lifecycle stage of users and the duration in days that it took for them to be in the current lifecycle stage, considering the below sample table where users go through three stages before onboarding, with stage 1 as the starting point and stage 3 as the final stage'''
+
 #SQL Query 1:
 
 with p_users as
@@ -20,6 +22,8 @@ from p_users
 where rnk = 1;
 
 
+
+'''Task 2 -	From the “Sales” data, write a SQL query to find the days when the sales were higher than the previous day'''
 
 #SQL Query 2:
 
@@ -52,6 +56,8 @@ where Daily_sales > Prev_day_sales;
 
 
 
+'''Task 3 -	From the “Contact” table below, write a SQL query to delete the duplicates. Also, write a query to display invalid emails.'''
+
 #SQL Query 3:
 
 with p_contact as
@@ -65,6 +71,14 @@ select [ID (int)],
 from [dbo].['Packt_contact']
 where [Email (string)] not like '%_@%_.com';
 
+
+
+''' Task 4 - 4)	Consider the sample data below that shows the activity of users. You are requested to write SQL query to find the users who got a “credit” for their streak completion. Here, a continuous activity of four weeks is considered as a streak completion (i.e., a user must be active at least once in a week for 4 consecutive weeks). Output the below-mentioned columns in your query.
+Output columns : user_id,	activity_date,	activity_week,	streak_number	credited 
+
+Here 
+•	streak_number – streak count of users runs from 1 to 4.
+•	credited? – At the fourth streak_number or fourth week of activity user gets a credit. A binary column (0/1)'''
 
 
 #SQL Query 4:
